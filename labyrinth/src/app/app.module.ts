@@ -8,13 +8,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { QuizComponent } from './components/quiz/quiz.component';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { MatRadioModule } from '@angular/material/radio';
+import { QuestionPapersComponent } from './components/question-papers/question-papers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    QuestionPapersComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +27,11 @@ import { MatRadioModule } from '@angular/material/radio';
     MatToolbarModule,
     MatCardModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

@@ -1,9 +1,17 @@
-<div class="body">
+<div class="body selection" *ngIf="!quizDisabled">
+  <div *ngFor="let item of list">
+    <button class="itembutton" (click)="forward(item)">
+      {{item}}
+    </button>
+  </div>
+</div>
+<div class="body" *ngIf=quizDisabled>
     <div class="title">
         <span>Subject : {{quiz.subject}} </span>
         <br>
         <span>Title : {{quiz.title}}</span>
       </div>
+
         <div class="questions">
 
             <mat-card class="example-card" >
