@@ -1,23 +1,25 @@
-#toolbar{
+#toolbar {
     display: flex;
 }
 
 .example-spacer {
     flex: 1 1 auto;
-  }
-  .example-spacer2{
-      width: 1%;
-  }
-  .section{
-      border: 1px solid rgb(153, 173, 230);
-      padding-left: 2%;
-      padding-right: 2%;
-      border-radius: 3px;
-  }
-  .section:hover{
-      cursor: pointer;
-      /* padding-top: 0.1%;
-      padding-bottom: 0.1%; */
-      border: 1px solid rgb(127, 135, 158);
+}
 
-  }
+.example-spacer2 {
+    width: 1%;
+}
+
+.section {
+    border: 1px solid rgb(153, 173, 230);
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 3px;
+}
+
+.section:hover {
+    cursor: pointer;
+    /* padding-top: 0.1%;
+      padding-bottom: 0.1%; */
+    border: 1px solid rgb(186, 200, 238);
+}
