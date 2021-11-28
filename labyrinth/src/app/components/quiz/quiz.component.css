@@ -29,7 +29,16 @@
   width: 60%;
 }
 
-
+mat-icon{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin: 5%;
+  width: 20%;
+  border: 1px solid rgb(184, 172, 172);
+}
+mat-icon:hover,button{
+  cursor: pointer;
+}
 
 .icon{
   width: 10%;

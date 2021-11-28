@@ -19,11 +19,13 @@
                 </div>
                 selected answer is {{optionSelected}}
                 </mat-card-content>
-
-                <button mat-raised-button color="primary" (click)="prevQuestion()">Previous Question </button>
+                <mat-icon  aria-hidden="false" aria-label="Example home icon" (click)="prevQuestion()" *ngIf="currentIndex > 0">chevron_left</mat-icon>
+                <!-- <button mat-raised-button color="primary" (click)="prevQuestion()">Previous Question </button> -->
                 <button mat-raised-button color="primary" (click)="onSubmit()">Submit Answer </button>
 
-                <button mat-raised-button color="primary" (click)="nextQuestion()">Next Question </button>
+                <!-- <button mat-raised-button color="primary" (click)="nextQuestion()">Next Question </button> -->
+                <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="nextQuestion()" *ngIf="currentIndex < totalNumberOfQuestions-1" >chevron_right</mat-icon>
+
                 <div class="icon" *ngIf="showExplanation && answerCorrect">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                   <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>

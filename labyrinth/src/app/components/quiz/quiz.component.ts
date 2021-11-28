@@ -44,6 +44,7 @@ optionSelected:any;
 showExplanation:any;
 answerCorrect:any;
 answerWrong:any;
+totalNumberOfQuestions:any;
 favoriteSeason: string | undefined;
 seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
 
@@ -55,6 +56,7 @@ currentIndex:any;
     this.answerCorrect=false;
     this.answerWrong=false;
     this.currentIndex = 0
+    this.totalNumberOfQuestions = this.quiz.questions.length;
     this.currentQuestion = this.quiz.questions[this.currentIndex]
     
   }
