@@ -71,6 +71,35 @@ button {
     margin-top: 10%;
 }
 
+.loop {
+    /* background-color: red; */
+    text-align: center;
+    padding: 1% 40%;
+}
+
 .itembutton {
+    display: block;
     margin: 1%;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.itembutton:hover {
+    background-color: #8895dd;
+}
+
+.tracking {
+    margin: 2% 15%;
+}
+
+.infoheader {
+    cursor: pointer;
+}
+
+.infoheader:hover {
+    text-decoration: underline;
 }

@@ -1,62 +1,63 @@
+<div class="tracking">
+    <span *ngFor="let item of tracking;let isLast=last">  <span class="infoheader"  
+      (click)="navigateTo(item.index,item.header)"> {{item.header}} </span> {{isLast ? '' : '>> '}} </span>
+</div>
 <div class="body selection" *ngIf="!quizDisabled">
-  <div *ngFor="let item of list">
-    <button class="itembutton" (click)="forward(item)">
-      {{item}}
-    </button>
-  </div>
+    <div class="loop" *ngFor="let item of list">
+        <div class="itembutton" (click)="forward(item)">
+            {{item}}
+        </div>
+    </div>
 </div>
 <div class="body" *ngIf=quizDisabled>
     <div class="title">
         <span>Subject : {{quiz.subject}} </span>
         <br>
         <span>Title : {{quiz.title}}</span>
-      </div>
+    </div>
 
-        <div class="questions">
+    <div class="questions">
 
-            <mat-card class="example-card" >
-                <mat-card-title>Question Numer - {{currentQuestion.serialNumber}} </mat-card-title>
+        <mat-card class="example-card">
+            <mat-card-title>Question Numer - {{currentQuestion.serialNumber}} </mat-card-title>
 
-                <mat-card-content>
-                  <p>{{currentQuestion.question}}</p>
-                  <div class="radio" *ngFor="let option of currentQuestion.options;index as i">
+            <mat-card-content>
+                <p>{{currentQuestion.question}}</p>
+                <div class="radio" *ngFor="let option of currentQuestion.options;index as i">
                     <label>
                            <input type="radio" name="keys_on_hand" [value]="option" [(ngModel)]="optionSelected">
                              {{option}}
                     </label>
                 </div>
                 selected answer is {{optionSelected}}
-                </mat-card-content>
-                <mat-icon  aria-hidden="false" aria-label="Example home icon" (click)="prevQuestion()" *ngIf="currentIndex > 0">chevron_left</mat-icon>
-                <!-- <button mat-raised-button color="primary" (click)="prevQuestion()">Previous Question </button> -->
-                <button mat-raised-button color="primary" (click)="onSubmit()">Submit Answer </button>
+            </mat-card-content>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="prevQuestion()" *ngIf="currentIndex > 0">chevron_left</mat-icon>
+            <!-- <button mat-raised-button color="primary" (click)="prevQuestion()">Previous Question </button> -->
+            <button mat-raised-button color="primary" (click)="onSubmit()">Submit Answer </button>
 
-                <!-- <button mat-raised-button color="primary" (click)="nextQuestion()">Next Question </button> -->
-                <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="nextQuestion()" *ngIf="currentIndex < totalNumberOfQuestions-1" >chevron_right</mat-icon>
+            <!-- <button mat-raised-button color="primary" (click)="nextQuestion()">Next Question </button> -->
+            <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="nextQuestion()" *ngIf="currentIndex < totalNumberOfQuestions-1">chevron_right</mat-icon>
 
-                <div class="icon" *ngIf="showExplanation && answerCorrect">
+            <div class="icon" *ngIf="showExplanation && answerCorrect">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                   <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
                   <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
                 </svg>
-              </div>
-              <div class="icon" *ngIf="showExplanation && answerWrong">                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+            </div>
+            <div class="icon" *ngIf="showExplanation && answerWrong"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                   <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
                   <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
                   <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
                 </svg>
-              </div>
-                <mat-card *ngIf=showExplanation>
-                <p>
-                  Correct Answer is : {{currentQuestion.correctAnswer}} <br> <br>
-                  Explanation : <br>
-                 {{currentQuestion.explanation}}
-                </p>
-              </mat-card>
-
-              </mat-card>
-
-                  
             </div>
-</div>
+            <mat-card *ngIf=showExplanation>
+                <p>
+                    Correct Answer is : {{currentQuestion.correctAnswer}} <br> <br> Explanation : <br> {{currentQuestion.explanation}}
+                </p>
+            </mat-card>
 
+        </mat-card>
+
+
+    </div>
+</div>

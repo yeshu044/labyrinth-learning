@@ -11,11 +11,19 @@ import { FormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { MatRadioModule } from '@angular/material/radio';
+import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { QuestionPapersComponent } from './components/question-papers/question-papers.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    HomeComponent,
+    AboutUsComponent,
+    QuestionPapersComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,

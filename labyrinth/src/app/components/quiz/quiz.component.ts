@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizComponent implements OnInit {
 
+  tracking = [{"index":-1,
+                "header":"Main"}
+]
+
+  currentTrackingIndex = 0;
   constructor() { }
   quiz = {
     "type": "list",
@@ -96,6 +101,7 @@ export class QuizComponent implements OnInit {
       }
     }
   }
+  
   currentQuestion: any;
   optionSelected: any;
   showExplanation: any;
@@ -108,9 +114,12 @@ export class QuizComponent implements OnInit {
   list: any;
   quizDisabled: any;
   currentIndex: any;
+  temp:any;
+  
   ngOnInit(): void {
-
+    this.temp = this.quiz;
     this.start()
+    
   }
   start() {
     if (this.quiz.type == "quiz") {
@@ -124,7 +133,12 @@ export class QuizComponent implements OnInit {
   }
   forward(item: string) {
     this.quiz = JSON.parse(JSON.stringify(this.quiz.list))[item]
+    this.tracking.push({"index":this.currentTrackingIndex,
+    "header":item})
+    this.currentTrackingIndex = this.currentIndex+1;
     this.start()
+    
+    
   }
 
 
@@ -165,6 +179,41 @@ export class QuizComponent implements OnInit {
       this.answerWrong = true;
       console.log("wrong answer")
     }
+  }
+  navigateTo(index:any,header:string){
+    this.quiz = this.temp
+    if (header == 'Main')
+    {
+      this.tracking = [{"index":-1,
+                "header":"Main"}
+]
+
+  this.currentTrackingIndex = 0;
+      this.start()
+
+      return
+
+    }
+    console.log(index,header)
+   
+    
+    for(let i =0;i<=index;i++)
+    {
+      // this.quiz = this.quiz[]
+      console.log(i, this.tracking[i]['header'])
+      this.quiz = JSON.parse(JSON.stringify(this.quiz.list))[this.tracking[i+1]['header']]
+      this.start()
+    }
+    if (this.tracking.length > 1) {
+    this.tracking = this.tracking.filter(item=>{
+      return item.index <= index
+    })
+    this.currentTrackingIndex = index + 1
+    console.log(this.tracking)
+    console.log(this.currentTrackingIndex)
+
+  }
+
   }
 
 }
