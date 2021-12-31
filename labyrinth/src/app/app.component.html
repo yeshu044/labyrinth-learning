@@ -2,31 +2,99 @@
     <div class="toolbar">
 
         <mat-toolbar>
-            <span>Labyrinth Learning Platform</span>
 
-            <span class="example-spacer"></span>
-            <span class="section" routerLink="/home">
+            <div fxShow="true" fxHide.gt-sm="true">
+                <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+            </div>
+            <span class="platform-name"> Labyrinth Learning Platform</span>
+            <div fxShow="true" fxHide.lt-md="true">
+                <span class="example-spacer"></span>
+                <span class="section" routerLink="/home">
       Home
     </span>
-            <span class="example-spacer2"></span>
-            <span class="section" routerLink="/about-us"> 
+                <span class="example-spacer2"></span>
+                <span class="section" routerLink="/about-us"> 
                 About Us
             </span>
-            <span class="example-spacer2"></span>
-            <span routerLink="/quiz" class="section">
+                <span class="example-spacer2"></span>
+                <span routerLink="/quiz/0" class="section">
       Quiz
     </span>
-            <span class="example-spacer2"></span>
-            <span class="section" routerLink="/question-papers">
+                <span class="example-spacer2"></span>
+                <span class="section" routerLink="/question-papers">
       Quesiton papers
     </span>
-            <span class="example-spacer2"></span>
-            <span class="section" routerLink="/blogs">
+                <span class="example-spacer2"></span>
+                <span class="section" routerLink="/blogs">
       Blogs
     </span>
-            <span class="example-spacer2"></span>
-
+                <span class="example-spacer2"></span>
+            </div>
         </mat-toolbar>
+
     </div>
-    <router-outlet></router-outlet>
+
+
+    <mat-sidenav-container fxFlexFill class="example-container">
+
+        <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+            <div fxLayout="column">
+                <a mat-button routerLink="/about-us">Home </a>
+                <a mat-button routerLink="/prices">About Us</a>
+                <a mat-button routerLink="/start-page">Quiz</a>
+                <a mat-button routerLink="/offer">Question Paper</a>
+                <a mat-button routerLink="/contact">Contact</a>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content fxFlexFill>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+
+
+
+    </mat-sidenav-container>
+
+
 </div>
+
+
+
+
+<!-- <div>
+    <mat-toolbar color="primary">
+        <div fxShow="true" fxHide.gt-sm="true">
+            <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+        </div>
+
+        <a mat-button class="companyName" routerLink="/">
+            <span>Site name</span>
+        </a>
+        <span class="example-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true">
+            <a mat-button routerLink="/about-us">About us</a>
+            <a mat-button routerLink="/prices">Prices</a>
+            <a mat-button routerLink="/start-page">Start page</a>
+            <a mat-button routerLink="/offer">Offer</a>
+            <a mat-button routerLink="/contact">Contact</a>
+        </div>
+
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill class="example-container">
+
+        <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+            <div fxLayout="column">
+                <a mat-button routerLink="/about-us">About us</a>
+                <a mat-button routerLink="/prices">Prices</a>
+                <a mat-button routerLink="/start-page">Start page</a>
+                <a mat-button routerLink="/offer">Offer</a>
+                <a mat-button routerLink="/contact">Contact</a>
+            </div>
+        </mat-sidenav>
+
+    </mat-sidenav-container>
+</div> -->

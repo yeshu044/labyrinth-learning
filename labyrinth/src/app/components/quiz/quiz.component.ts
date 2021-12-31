@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -12,7 +13,6 @@ export class QuizComponent implements OnInit {
 ]
 
   currentTrackingIndex = 0;
-  constructor() { }
   quiz = {
     "type": "list",
     "questions": [],
@@ -115,10 +115,29 @@ export class QuizComponent implements OnInit {
   quizDisabled: any;
   currentIndex: any;
   temp:any;
+  path:any;
   
+
+  constructor(private router: Router,private route: ActivatedRoute) { }
+
   ngOnInit(): void {
+    this.path = this.route.snapshot.paramMap.get('path');
+    console.log(this.path)
     this.temp = this.quiz;
+    if(this.path == '0')
+    {
     this.start()
+    }else{
+      let stages =  this.path.split('.')
+      console.log(stages)
+      // console.log(this.quiz)
+      for(let i=0;i<stages.length;i++)
+      {
+          this.forward_internal(stages[i].toUpperCase())
+
+      }
+      this.start()
+    }
     
   }
   start() {
@@ -130,6 +149,12 @@ export class QuizComponent implements OnInit {
       this.list = Object.keys(this.quiz.list)
     }
 
+  }
+  forward_internal(item:string){
+    this.quiz = JSON.parse(JSON.stringify(this.quiz.list))[item]
+    this.tracking.push({"index":this.currentTrackingIndex,
+    "header":item})
+    this.currentTrackingIndex = this.currentIndex+1;
   }
   forward(item: string) {
     this.quiz = JSON.parse(JSON.stringify(this.quiz.list))[item]

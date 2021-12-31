@@ -15,6 +15,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { QuestionPapersComponent } from './components/question-papers/question-papers.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+// import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { BlogsComponent } from './components/blogs/blogs.component';
     MatCardModule,
     MatRadioModule,
     FormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
