@@ -1,5 +1,23 @@
 <div class="homebody">
     <div class="home-section-1">
+        <h1 style="color: #EC008C;">Treding</h1>
+        <div class="section-left">
+            <div class="cards" *ngFor="let card of cards">
+                <mat-card class="example-card">
+                    <mat-card-subtitle>
+                        <div class="card-title-left" style="color: #EC008C;">{{card.category}}</div>
+                        <div class="card-title-left" style="color: #827f80;">Verified</div>
+                    </mat-card-subtitle>
+                    <mat-card-title>{{card.tite}}</mat-card-title>
+                    <mat-card-content>
+                        <p>{{card.content}}</p>
+                    </mat-card-content>
+                    <mat-card-content>
+                        <p>{{card.action}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
 
     </div>
     <div class="home-section-2">

@@ -11,5 +11,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  cards=[{
+    "category":'Quiz',
+    'tite':'CET 2021',
+    'content':'50  Questions',
+    'action':'Take Test'
+  },{
+    "category":'Quiz',
+    'tite':'CET 2021',
+    'content':'50  Questions',
+    'action':'Take Test'
+  },{
+    "category":'Quiz',
+    'tite':'CET 2021',
+    'content':'50  Questions',
+    'action':'Take Test'
+  } ]
 }
