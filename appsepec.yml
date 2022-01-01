@@ -1,5 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: .
+  - source: /
     destination: /home/ubuntu/projects/llp
+hooks:
+  BeforeInstall:
+    - location: hello.sh
+      timeout: 300
+      runas: root
