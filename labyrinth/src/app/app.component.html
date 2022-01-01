@@ -4,11 +4,11 @@
         <mat-toolbar>
 
             <div fxShow="true" fxHide.gt-sm="true">
-                <button mat-icon-button (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
+                <div class="mat-icon-button" (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </div>
             </div>
-            <span class="platform-name"> Labyrinth Learning Platform</span>
+            <span class="platform-name" routerLink="/home"> Labyrinth Learning Platform</span>
             <div fxShow="true" fxHide.lt-md="true">
                 <span class="example-spacer"></span>
                 <span class="section" routerLink="/home">
@@ -41,11 +41,11 @@
 
         <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
             <div fxLayout="column">
-                <a mat-button routerLink="/about-us">Home </a>
-                <a mat-button routerLink="/prices">About Us</a>
-                <a mat-button routerLink="/start-page">Quiz</a>
-                <a mat-button routerLink="/offer">Question Paper</a>
-                <a mat-button routerLink="/contact">Contact</a>
+                <span class="nav-item" mat-button routerLink="/home">Home </span>
+                <span class="nav-item" mat-button routerLink="/about-us">About Us</span>
+                <span class="nav-item" mat-button routerLink="/quiz/0">Quiz</span>
+                <span class="nav-item" mat-button routerLink="/question-paper">Question Paper</span>
+                <span class="nav-item" mat-button routerLink="/blogs">blogs</span>
             </div>
         </mat-sidenav>
 
@@ -57,6 +57,11 @@
 
     </mat-sidenav-container>
 
+    <footer>
+        <p> Contact Us : <br>Email : abc@abc.com
+        </p>
+        <div class="lastline">Copyright © 2021 Labyrinth Infotech. All rights reserved</div>
+    </footer>
 
 </div>
 
