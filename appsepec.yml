@@ -3,8 +3,3 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/projects/llp
-hooks:
-  BeforeInstall:
-    - location: hello.sh
-      timeout: 300
-      runas: root
