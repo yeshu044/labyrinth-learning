@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+=======
+.body {
+    margin: 0;
+    background-color: black;
+}
+
+.platform-name {
+    font-size: 100%;
+    cursor: pointer;
+}
+
+>>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
 #toolbar {
     display: flex;
 }
 
 .example-spacer {
     flex: 1 1 auto;
+<<<<<<< HEAD
 }
 
 .example-spacer2 {
@@ -14,12 +28,118 @@
     border: 1px solid rgb(153, 173, 230);
     padding-left: 2%;
     padding-right: 2%;
+=======
+    margin-left: 100%;
+}
+
+.example-spacer2 {
+    margin-left: 10%;
+}
+
+.section {
+    /* border: 1px solid rgb(153, 173, 230); */
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 70%;
+>>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
     border-radius: 3px;
 }
 
 .section:hover {
     cursor: pointer;
+<<<<<<< HEAD
     /* padding-top: 0.1%;
       padding-bottom: 0.1%; */
     border: 1px solid rgb(186, 200, 238);
+=======
+    /* border: 1px solid rgb(186, 200, 238); */
+}
+
+mat-toolbar {
+    background-color: #212121;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    #toolbar {
+        width: 100%;
+    }
+}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* body {
+    margin: 0%;
+} */
+
+
+/* .companyName {
+    font-size: 150%;
+} */
+
+
+/* 
+.mat-toolbar {
+    height: 7vh;
+} */
+
+
+/* 
+div {
+    overflow: inherit;
+} */
+
+.mat-sidenav-container {
+    min-height: 93vh !important;
+}
+
+
+/* button {
+    font-size: 110%;
+    min-width: min-content;
+} */
+
+
+/* .example-icon {
+    padding: 0 14px;
+} */
+
+
+/* .mat-sidenav-content {
+    font-size: 200%;
+    text-align: center;
+} */
+
+.mat-icon-button {
+    padding: 10px;
+    padding-top: 25px;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 150;
+    color: rgb(12, 8, 8)
+}
+
+footer {
+    background-color: rgb(19, 17, 17);
+    padding: 10%;
+    color: rgb(189, 183, 183);
+}
+
+.lastline {
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    footer {
+        background-color: rgb(19, 17, 17);
+        padding: 2% 15%;
+        color: rgb(189, 183, 183);
+    }
+    .lastline {
+        text-align: center;
+    }
+>>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
 }

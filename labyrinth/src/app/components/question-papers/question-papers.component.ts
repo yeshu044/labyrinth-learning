@@ -12,7 +12,10 @@ export class QuestionPapersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+<<<<<<< HEAD
 
   
 
+=======
+>>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
 }

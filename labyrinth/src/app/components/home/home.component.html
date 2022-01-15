@@ -1,0 +1,60 @@
+<div class="homebody">
+
+    <div class="tests-section">
+        <span class="heading">Top Exams</span>
+
+        <div class="row">
+            <span class="column">
+                    CET
+            </span>
+            <span class="column">
+                PG-CET
+            </span>
+            <span class="column">
+                EXAM - A
+            </span>
+        </div>
+        <div class="row">
+            <span class="column">
+                    CET
+            </span>
+            <span class="column">
+                PG-CET
+            </span>
+            <span class="column">
+                EXAM - A
+            </span>
+        </div>
+
+    </div>
+    <div class="home-section-1">
+        <div class="section-left">
+            <img src="./../../../assets/empty.jpg" alt="">
+        </div>
+        <div class="section-right">
+            <h1 style="color: #EC008C;">Treding</h1>
+
+            <div class="cards" *ngFor="let card of cards">
+                <mat-card class="example-card">
+                    <mat-card-subtitle>
+                        <div class="card-title-left" style="color: #EC008C;">{{card.category}}</div>
+                        <div class="card-title-left" style="color: #8ae44a;">Verified</div>
+                        <!-- <div class="card-title-left"><img src="./../../../assets/verfied.jpg" alt="" width="1px" height="1px"></div> -->
+
+                    </mat-card-subtitle>
+                    <mat-card-title>{{card.tite}}</mat-card-title>
+                    <mat-card-content>
+                        <p>{{card.content}}</p>
+                    </mat-card-content>
+                    <mat-card-content>
+                        <p (click)="redirect(card.path)">{{card.action}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+    <div class="home-section-2">
+
+    </div>
+</div>

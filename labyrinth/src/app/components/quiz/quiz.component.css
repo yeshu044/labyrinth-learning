@@ -65,6 +65,7 @@ button {
 
 .example-sidenav {
     padding: 20px;
+<<<<<<< HEAD
 }
 
 .selection {
@@ -73,4 +74,53 @@ button {
 
 .itembutton {
     margin: 1%;
+=======
+}
+
+.selection {
+    margin-top: 10%;
+}
+
+.loop {
+    /* background-color: red; */
+    text-align: center;
+    padding: 1% 40%;
+}
+
+.itembutton {
+    display: block;
+    margin: 1%;
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.itembutton:hover {
+    background-color: #8895dd;
+}
+
+.tracking {
+    padding: 2% 15%;
+    color: rgb(194, 180, 125);
+}
+
+.infoheader {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.infoheader:hover {
+    text-decoration: underline;
+}
+
+body {
+    width: 100%;
+    background-color: black;
+    margin: 0%;
+    color: white;
+>>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
 }
