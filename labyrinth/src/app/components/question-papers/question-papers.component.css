@@ -1,0 +1,27 @@
+.body {
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    height: 50vh;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    background-color: black;
+}
+
+.inside{
+margin-top: 20%;
+}
+
+button{
+    width: 100%;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+background-color: aqua;
+cursor: pointer;
+font-family: 'Times New Roman', Times, serif;
+}

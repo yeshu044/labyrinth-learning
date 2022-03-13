@@ -1,5 +1,28 @@
-<<<<<<< HEAD
-
-=======
-<p>question-papers works!</p>
->>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
+<div class="body">
+    <div class="inside">
+        <div *ngIf="disableType">
+            <div *ngFor="let type of keysType">
+                <button (click)="forward(type)">{{type}}</button>
+            </div>
+        </div>
+        <div *ngIf="disableYear">
+            <div>
+                <button (click)="enableType()">Main</button>
+            </div>
+            <div *ngFor="let year of keysYear">
+                <button (click)="forward_internal(year)">{{year}}</button>
+            </div>
+        </div>
+        <div *ngIf="disableContent">
+            <div>
+                <button (click)="enableType()">Main</button>
+                <button (click)="enableYear()">Year</button>
+            </div>
+            <br>
+            <p style="color: aliceblue;"> {{disObj.subject}} <br>
+                {{disObj.title}} <br>
+            </p>
+            <a [href]="disObj.questionPapersLink" target="_blank">Open The Document</a>
+        </div>
+    </div>
+</div>

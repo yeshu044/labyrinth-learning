@@ -8,15 +8,11 @@ import { ActivatedRoute,Router } from '@angular/router';
 })
 export class QuizComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-=======
   tracking = [{"index":-1,
                 "header":"Main"}
 ]
 
   currentTrackingIndex = 0;
->>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
   quiz = {
     "type": "list",
     "questions": [],
@@ -103,34 +99,6 @@ export class QuizComponent implements OnInit {
           }
         }
       }
-<<<<<<< HEAD
-    }
-  }
-  currentQuestion: any;
-  optionSelected: any;
-  showExplanation: any;
-  answerCorrect: any;
-  answerWrong: any;
-  totalNumberOfQuestions: any;
-  favoriteSeason: string | undefined;
-  seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
-  showFiller = false;
-  list: any;
-  quizDisabled: any;
-  currentIndex: any;
-  ngOnInit(): void {
-
-    this.start()
-  }
-  start() {
-    if (this.quiz.type == "quiz") {
-      this.quizDisabled = true
-      this.quizInit()
-    } else if (this.quiz.type == "list") {
-      this.quizDisabled = false
-      this.list = Object.keys(this.quiz.list)
-    }
-=======
     }
   }
   
@@ -197,18 +165,13 @@ export class QuizComponent implements OnInit {
     
     
   }
->>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
 
-  }
-  forward(item: string) {
-    this.quiz = JSON.parse(JSON.stringify(this.quiz.list))[item]
-    this.start()
-  }
+  
+  // forward(item: string) {
+  //   this.quiz = JSON.parse(JSON.stringify(this.quiz.list))[item]
+  //   this.start()
+  // }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
   quizInit() {
     this.showExplanation = false
     this.answerCorrect = false;

@@ -65,16 +65,6 @@ button {
 
 .example-sidenav {
     padding: 20px;
-<<<<<<< HEAD
-}
-
-.selection {
-    margin-top: 10%;
-}
-
-.itembutton {
-    margin: 1%;
-=======
 }
 
 .selection {
@@ -122,5 +112,4 @@ body {
     background-color: black;
     margin: 0%;
     color: white;
->>>>>>> 0f4d0168a10a6ae234d9b8e77c56f8bd5eef8627
 }
